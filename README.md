@@ -4,22 +4,22 @@
 ### Antes de Empezar:
 
 1. Realiza un **Fork** de este repositorio:
-![Repositorio del Primer Parcial](https://live.staticflickr.com/65535/53638747703_0dc1434506_z.jpg)
+![Repositorio del Primer Parcial](https://live.staticflickr.com/65535/53639387186_c1c829e40a_z.jpg)
 
-2. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
+1. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
 
-3. Completa tus datos personales en la siguiente tabla:
+2. Completa tus datos personales en la siguiente tabla:
     | Nombre   | Apellido   | CI   |
     | -------- | ---------- | ---- |
     | `nombre` | `apellido` | `ci` |
 
-4. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
+3. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
     ```bash
     git add .
     git commit -m "datos actualizados"
     git push origin main
     ```
-5. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
+4. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
     ```bash
     pip install -r requirements.txt
     ```
@@ -193,6 +193,9 @@ Durante el examen solo puede consultar los siguientes recursos:
 - [Patrón de Diseño Builder](https://refactoring.guru/es/design-patterns/builder)
 - [Documentación Oficial de Python](https://docs.python.org/3/)
 - [Documentación de HTTP Server](https://docs.python.org/3/library/http.server.html)
+- - [Documentación de la biblioteca requests](https://requests.readthedocs.io/en/latest/)
+- [Documentación del modulo urllib.parse](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs)
+
 
 ### IMPORTANTE: 
 - **No** se permite el uso de frameworks como Flask, Django, FastAPI, etc.
