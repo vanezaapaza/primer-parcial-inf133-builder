@@ -32,7 +32,6 @@ Te han contratado como **Junior Back-End Developer** en una empresa de desarroll
 - name: Nombre del personaje.
 - level: Nivel del personaje.
 - role: Rol del personaje en el juego (Wizard, Warrior, Archer)
-- intelligence: Puntos de inteligencia del personaje.
 - charisma: Puntos de carisma del personaje.
 - strength: Puntos de fuerza del personaje.
 - dexterity: Puntos de destreza del personaje. 
