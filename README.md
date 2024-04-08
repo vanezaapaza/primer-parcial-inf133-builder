@@ -26,7 +26,7 @@
 
 ### Contexto:
 
-Te han contratado como **Junior Back-End Developer** en una empresa de desarrollo de videojuegos. Tu primer tarea es desarrollar un **API RESTful** para administrar las información de los personajes de un nuevo videojuego RPG que se encuentra en desarrollo. Cada personaje del videojuego RPG tiene las siguientes características:
+Te han contratado como **Junior Back-End Developer** en una empresa de desarrollo de videojuegos. Tu primera tarea es desarrollar un **API RESTful** para administrar las información de los personajes de un nuevo videojuego RPG que se encuentra en desarrollo. Cada personaje del videojuego RPG tiene las siguientes características:
 
 - id: Identificador único del personaje.
 - name: Nombre del personaje.
@@ -49,11 +49,11 @@ Construye una **API RESTful** que permita realizar las operaciones **CRUD** sobr
 5. Listar a todos los personajes de la clase `Warrior` con nivel mayor a 10.
 6. Listar a todos los personajes de la clase `Archer` con nivel mayor a 5 y carisma mayor a 10.
 7. Actualizar el nivel de un personaje.
-8. Actualizar inteligencia, carisma, fuerza y destreza de un personaje.
+8. Actualizar la inteligencia, carisma, fuerza y destreza de un personaje.
 9. Eliminar al personaje con id 1.
 10. Crear un nuevo personaje y procurar que el id sea único.
 
-La **API RESTful** debe estar construida con el patron de diseño BUILDER y debe cumplir con los principios de desarrollo de Software DRY, KISS, YAGNI y la S de SOLID.
+La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
 
 ### Rutas y resultados esperados:
 
