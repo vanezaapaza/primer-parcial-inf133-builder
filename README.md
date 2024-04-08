@@ -192,7 +192,7 @@ Durante el examen solo puede consultar los siguientes recursos:
 - [Patrón de Diseño Builder](https://refactoring.guru/es/design-patterns/builder)
 - [Documentación Oficial de Python](https://docs.python.org/3/)
 - [Documentación de HTTP Server](https://docs.python.org/3/library/http.server.html)
-- - [Documentación de la biblioteca requests](https://requests.readthedocs.io/en/latest/)
+- [Documentación de la biblioteca requests](https://requests.readthedocs.io/en/latest/)
 - [Documentación del modulo urllib.parse](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs)
 
 
