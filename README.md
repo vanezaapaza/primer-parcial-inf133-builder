@@ -32,7 +32,6 @@ Te han contratado como **Junior Back-End Developer** en una empresa de desarroll
 - name: Nombre del personaje.
 - level: Nivel del personaje.
 - role: Rol del personaje en el juego (Wizard, Warrior, Archer)
-- health: Puntos de vida del personaje.
 - intelligence: Puntos de inteligencia del personaje.
 - charisma: Puntos de carisma del personaje.
 - strength: Puntos de fuerza del personaje.
@@ -44,14 +43,10 @@ Construye una **API RESTful** que permita realizar las operaciones **CRUD** sobr
 
 1. Crear un nuevo personaje.
 2. Listar todos los personajes
-3. Buscar un personaje por su id.
-4. Listar a todos los personajes del rol `Wizard`.
-5. Listar a todos los personajes del rol `Warrior` con nivel mayor a 10.
-6. Listar a todos los personajes del rol `Archer` con nivel mayor a 5 y carisma mayor a 10.
-7. Actualizar el nivel de un personaje.
-8. Actualizar la inteligencia, carisma, fuerza y destreza de un personaje.
-9. Eliminar al personaje con id 1.
-10. Crear un nuevo personaje y procurar que el id sea único.
+3. Listar a todos los personajes del rol `Archer` con nivel igual a 5 y carisma igual a 10.
+4. Actualizar la carisma, fuerza y destreza de un personaje por su **id**.
+5. Eliminar al personaje con **id** 1.
+6. Crear un nuevo personaje y procurar que el id sea único y correlativo.
 
 La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
 
@@ -64,8 +59,6 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
         "name": "Gandalf",
         "level": 10,
         "role": "Wizard",
-        "health": 100,
-        "intelligence": 20,
         "charisma": 15,
         "strength": 10,
         "dexterity": 10
@@ -77,8 +70,6 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
         "name": "Gandalf",
         "level": 10,
         "role": "Wizard",
-        "health": 100,
-        "intelligence": 20,
         "charisma": 15,
         "strength": 10,
         "dexterity": 10
@@ -91,94 +82,27 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
             "name": "Gandalf",
             "level": 10,
             "role": "Wizard",
-            "health": 100,
-            "intelligence": 20,
             "charisma": 15,
             "strength": 10,
             "dexterity": 10
     }}
     ```
-3. GET /characters/1
-    - Respuesta Esperada:
-    ```json
-    {"1":{
-            "name": "Gandalf",
-            "level": 10,
-            "role": "Wizard",
-            "health": 100,
-            "intelligence": 20,
-            "charisma": 15,
-            "strength": 10,
-            "dexterity": 10
-    }}
-    ```
-4. GET /characters/?role=Wizard
-   - Respuesta Esperada:
-    ```json
-    {"1":{
-        "name": "Gandalf",
-        "level": 10,
-        "role": "Wizard",
-        "health": 100,
-        "intelligence": 20,
-        "charisma": 15,
-        "strength": 10,
-        "dexterity": 10
-    }}
-    ```
-5. GET /characters/?role=Warrior&level=10
-   - Respuesta Esperada:
-    ```json
-    {"2":{
-        "name": "Aragorn",
-        "level": 10,
-        "role": "Warrior",
-        "health": 100,
-        "intelligence": 20,
-        "charisma": 15,
-        "strength": 10,
-        "dexterity": 10
-    }}
-    ```
-6. GET /characters/?role=Archer&level=5&charisma=10
+3. GET /characters/?role=Archer&level=5&charisma=10
    - Respuesta Esperada:
     ```json
     {"2":{
         "name": "Robin",
         "level": 5,
         "role": "Archer",
-        "health": 100,
-        "intelligence": 20,
         "charisma": 10,
         "strength": 10,
         "dexterity": 10
     }}
     ```
-7. PUT /characters/1
+4. PUT /characters/2
    - Datos a Enviar:
     ```json
     {
-        "level": 1
-    }
-    ```
-    - Respuesta Esperada:
-    ```json
-    {
-        "name": "Gandalf",
-        "level": 1,
-        "role": "Wizard",
-        "health": 100,
-        "intelligence": 20,
-        "charisma": 15,
-        "strength": 10,
-        "dexterity": 10
-    }
-    ```
-8. PUT /characters/2
-   - Datos a Enviar:
-    ```json
-    {
-        "intelligence": 30,
         "charisma": 20,
         "strength": 15,
         "dexterity": 15
@@ -190,27 +114,23 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
         "name": "Aragorn",
         "level": 10,
         "role": "Warrior",
-        "health": 100,
-        "intelligence": 30,
         "charisma": 20,
         "strength": 15,
         "dexterity": 15
     }
     ```
-9.  DELETE /characters/3
+5.  DELETE /characters/3
     - Respuesta Esperada:
     ```json
     {"message": "Character with id 3 has been deleted successfully"}
     ```
-10. POST /characters
+6. POST /characters
     - Datos a Enviar:
     ```json
     {
         "name": "Legolas",
         "level": 5,
         "role": "Archer",
-        "health": 100,
-        "intelligence": 20,
         "charisma": 15,
         "strength": 10,
         "dexterity": 10
@@ -222,22 +142,18 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
         "name": "Legolas",
         "level": 5,
         "role": "Archer",
-        "health": 100,
-        "intelligence": 20,
         "charisma": 15,
         "strength": 10,
         "dexterity": 10
     }
     ```
-11. GET /characters
+7. GET /characters
     - Respuesta Esperada:
     ```json    
     {"1":{
             "name": "Gandalf",
             "level": 10,
             "role": "Wizard",
-            "health": 100,
-            "intelligence": 20,
             "charisma": 15,
             "strength": 10,
             "dexterity": 10
@@ -246,8 +162,6 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
             "name": "Aragorn",
             "level": 10,
             "role": "Warrior",
-            "health": 100,
-            "intelligence": 30,
             "charisma": 20,
             "strength": 15,
             "dexterity": 15
@@ -256,8 +170,6 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
             "name": "Legolas",
             "level": 5,
             "role": "Archer",
-            "health": 100,
-            "intelligence": 20,
             "charisma": 15,
             "strength": 10,
             "dexterity": 10
@@ -265,8 +177,8 @@ La **API RESTful** debe estar construida con el patron de diseño **BUILDER** y 
     ```
 
 ### Entrega:
-1. La lógica de la API debe estar en el archivo `server.py`.
-2. La lógica del cliente debe estar en el archivo `client.py`.
+1. La lógica de la API debe estar en el archivo `server.py` que se encuentra dentro de la carpeta `solution`.
+2. La lógica del cliente debe estar en el archivo `client.py` que se encuentra dentro de la carpeta `solution`.
 3. Una vez tengas los puntos 1 y 2 completados, realiza un commit con el mensaje "Entrega Final" y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
     ```bash
     git add .
